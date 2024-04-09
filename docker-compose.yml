@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  taskapp:
+    container_name: taskcontainer
+    image: ${DOCKER_REGISTRY-}taskapp
+    build:
+      context: .
+      dockerfile: TaskApp/Dockerfile
+
+    ports:
+    - "5132:80"
+    
+     
